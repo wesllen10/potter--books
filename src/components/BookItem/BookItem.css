@@ -1,0 +1,10 @@
+.book-item-button {
+  width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 15px 16px; border: 1px solid #e9e0d1; border-radius: 12px;
+  background: #fffdf8; color: #30271e; text-align: left; cursor: pointer;
+  transition: border-color .18s ease, transform .18s ease, background .18s ease;
+}
+.book-item-button:hover { transform: translateX(3px); border-color: #b58b4a; }
+.book-item-button.selected { border-color: #9b7137; background: #f8efdf; }
+.book-item-title { font-weight: 700; }
+.book-item-year { flex-shrink: 0; color: #8a704d; font-size: .88rem; }

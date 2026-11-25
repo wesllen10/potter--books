@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f4efe6; color: #30271e; font-family: 'DM Sans', sans-serif; }
+button { font: inherit; }
+.page { min-height: 100vh; padding: 0 22px 30px; }
+.hero {
+  position: relative; overflow: hidden; margin: 0 -22px; padding: 62px 20px 54px;
+  text-align: center; color: #f8f0df;
+  background: radial-gradient(circle at 50% 0%, #51402a, transparent 52%), #17130f;
+}
+.hero::before, .hero::after {
+  content: "✦"; position: absolute; color: rgba(220,190,132,.24); font-size: 3rem;
+}
+.hero::before { left: 10%; top: 28%; }
+.hero::after { right: 11%; bottom: 20%; font-size: 2rem; }
+.hero-mark { color: #d8b777; font-size: 2rem; margin-bottom: 10px; }
+.kicker { margin: 0 0 8px; color: #a17c45; font-size: .68rem; font-weight: 800; letter-spacing: .2em; }
+.hero .kicker { color: #d8b777; }
+.hero h1 { max-width: 850px; margin: 0 auto; font: 800 clamp(2rem, 6vw, 3.6rem)/1.15 'Playfair Display', Georgia, serif; }
+.hero h1 span { color: #d8b777; }
+.intro { max-width: 570px; margin: 17px auto 25px; color: #d0c5b2; line-height: 1.7; }
+.search-button {
+  padding: 14px 25px; border: 0; border-radius: 8px; color: #21190f;
+  background: linear-gradient(135deg, #e7cb91, #bd9555); font-weight: 800; cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0,0,0,.22); transition: transform .18s ease, filter .18s ease;
+}
+.search-button:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.06); }
+.search-button:disabled { opacity: .65; cursor: wait; }
+.content { width: min(1120px, 100%); margin: 36px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+.list-panel, .details-panel {
+  min-width: 0; padding: 25px; border: 1px solid #e6dccb; border-radius: 17px;
+  background: #fffaf2; box-shadow: 0 10px 30px rgba(61,45,25,.06);
+}
+.section-heading { display: flex; align-items: center; gap: 12px; padding-bottom: 17px; border-bottom: 1px solid #eee4d5; }
+.section-heading h2 { margin: 0; font: 700 1.35rem 'Playfair Display', Georgia, serif; }
+.section-icon { color: #b58b4a; font-size: 1.7rem; }
+.notice { padding: 25px 12px; color: #8b7b67; text-align: center; line-height: 1.7; }
+.error { padding: 14px; border-radius: 10px; color: #9b2929; background: #fff0ed; line-height: 1.5; }
+.footer { margin: 32px auto 0; color: #938675; text-align: center; font-size: .78rem; }
+@media (max-width: 760px) { .content { grid-template-columns: 1fr; } .hero { padding: 48px 18px; } }
+@media (max-width: 430px) { .page { padding-inline: 14px; } .hero { margin-inline: -14px; } .list-panel, .details-panel { padding: 19px; } }
